@@ -133,12 +133,12 @@
       </AnchorPane>
       <Pane layoutX="215.0" prefHeight="110.0" prefWidth="564.0" AnchorPane.leftAnchor="215.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <Label layoutX="44.0" layoutY="24.0" prefHeight="46.0" prefWidth="293.0" text="Tous les étudiants">
+            <Label fx:id="headerLabelId" layoutX="44.0" layoutY="24.0" prefHeight="46.0" prefWidth="293.0" text="Tous les étudiants">
                <font>
                   <Font size="25.0" />
                </font>
             </Label>
-            <Label layoutX="47.0" layoutY="68.0" prefHeight="22.0" prefWidth="293.0" text="/Home/Students" textFill="#006cae" />
+            <Label fx:id="pathLabelId" layoutX="47.0" layoutY="68.0" prefHeight="22.0" prefWidth="293.0" text="/Home/Students" textFill="#006cae" />
          </children>
       </Pane>
       <fx:include fx:id="AllStudentSceneId" source="AllStudentScene.fxml" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="215.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="110.0" />

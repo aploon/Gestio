@@ -3,10 +3,17 @@ package controller;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 
 public class MainSceneController {
+
+    @FXML
+    private Label headerLabelId;
+
+    @FXML
+    private Label pathLabelId;
 
     @FXML
     private Button addStudentId;
@@ -52,6 +59,9 @@ public class MainSceneController {
 
         if (!AddStudentSceneId.isVisible()) {
 
+            headerLabelId.setText("Ajouter un étudiants");
+            pathLabelId.setText("/home/Ajouter un étudiant");
+
             AllStudentSceneId.setVisible(false);
             AproposSceneId.setVisible(false);
             EvaluateStudentSceneId.setVisible(false);
@@ -73,6 +83,9 @@ public class MainSceneController {
     void AllStudentClicked(ActionEvent event) {
 
         if (!AllStudentSceneId.isVisible()) {
+
+            headerLabelId.setText("Tous les étudiants");
+            pathLabelId.setText("/home/tous les etudiants");
 
             AproposSceneId.setVisible(false);
             EvaluateStudentSceneId.setVisible(false);
@@ -96,6 +109,9 @@ public class MainSceneController {
 
         if (!AproposSceneId.isVisible()) {
 
+            headerLabelId.setText("A propos de Gestio");
+            pathLabelId.setText("/home/a propos de Gestio");
+
             AllStudentSceneId.setVisible(false);
             EvaluateStudentSceneId.setVisible(false);
             UeStudentSceneId.setVisible(false);
@@ -117,6 +133,9 @@ public class MainSceneController {
 
         if (!EvaluateStudentSceneId.isVisible()) {
 
+            headerLabelId.setText("Evaluer un étudiant");
+            pathLabelId.setText("/home/evaluer un etudiant");
+
             AllStudentSceneId.setVisible(false);
             AproposSceneId.setVisible(false);
             UeStudentSceneId.setVisible(false);
@@ -137,6 +156,9 @@ public class MainSceneController {
     void UeStudentClicked(ActionEvent event) {
 
         if (!UeStudentSceneId.isVisible()) {
+
+            headerLabelId.setText("Unité d'enseignement");
+            pathLabelId.setText("/home/unite denseignement");
 
             AllStudentSceneId.setVisible(false);
             AproposSceneId.setVisible(false);

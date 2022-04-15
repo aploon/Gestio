@@ -56,8 +56,6 @@ public class AllStudentSceneController extends MainSceneController implements In
         ResultSet result;
         String query;
 
-        
-
         try {
 
             query = "SELECT * FROM ETUDIANT";
