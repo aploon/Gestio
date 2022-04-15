@@ -83,6 +83,7 @@ public class Student {
         Button delete = new Button("Supprimer");
         update.setStyle("-fx-background-color: #48a5e4; -fx-text-fill: white; -fx-cursor: hand;");
         delete.setStyle("-fx-background-color: #d608089d; -fx-text-fill: white; -fx-cursor: hand;");
+        GridPane.setMargin(update, new Insets(0, 3, 0, 0));
 
         actions.add(update, 0, 0);
         actions.add(delete, 1, 0);
