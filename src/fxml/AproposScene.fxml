@@ -11,7 +11,7 @@
          <center>
             <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="403.0" prefWidth="504.0" style="-fx-background-color: #ebebeb;" BorderPane.alignment="CENTER">
                <children>
-                  <Text layoutX="35.0" layoutY="108.0" strokeType="OUTSIDE" strokeWidth="0.0" text="&quot;Gestio&quot; est Une plate-forme de gestion de données servant à recueillir et à gérer les données des étudiant d'une université suivant le système LMD. Elle permet aux écoles d'identifier des segments d'audiences, et peut être utilisée pour cibler des utilisateurs spécifiques et des contextes de gestion en ligne par exemple." wrappingWidth="433.13671875">
+                  <Text layoutX="35.0" layoutY="108.0" strokeType="OUTSIDE" strokeWidth="0.0" text="&quot;Gestio&quot; est une plate-forme de gestion servant à recueillir et à gérer les données des étudiant d'une université suivant le système LMD. Elle permet aux écoles d'identifier des segments d'audiences, et peut être utilisée pour cibler des utilisateurs spécifiques et des contextes de gestion en ligne par exemple." wrappingWidth="433.13671875">
                      <font>
                         <Font size="23.0" />
                      </font>
