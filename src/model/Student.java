@@ -16,6 +16,7 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
 import javafx.scene.control.Alert.AlertType;
+import javafx.scene.image.Image;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
@@ -108,6 +109,8 @@ public class Student {
                         Stage mainStage = new Stage();
                         Stage currentStage = (Stage) update.getScene().getWindow();
 
+                        mainStage.getIcons().add(new Image("/assets/img/gestio.png"));
+
                         mainStage.setUserData(this);
                         mainStage.initModality(Modality.APPLICATION_MODAL);
                         mainStage.initOwner(currentStage);
@@ -171,6 +174,8 @@ public class Student {
 
                     Stage mainStage = new Stage();
                     Stage currentStage = (Stage) addNote.getScene().getWindow();
+
+                    mainStage.getIcons().add(new Image("/assets/img/gestio.png"));
 
                     mainStage.setUserData(this);
                     mainStage.initModality(Modality.APPLICATION_MODAL);

@@ -16,3 +16,14 @@ Meanwhile, the compiled output files will be generated in the `bin` folder by de
 ## Dependency Management
 
 The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+
+#Error
+
+- In add student area, alert error don't work
+- Need to refresh platforme before actualise the data
+- Hover css of menu button don't match correctly
+- Icon into alert frame don't work
+
+#Features that i want to add
+
+- Title when i move cursor in front of link like Facebook...

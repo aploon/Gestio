@@ -17,6 +17,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.control.Alert.AlertType;
+import javafx.scene.image.Image;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.stage.Stage;
@@ -77,6 +78,8 @@ public class LoginSceneController implements Initializable{
                     Scene scene = new Scene(root);
 
                     Stage mainStage = new Stage();
+                    mainStage.getIcons().add(new Image("/assets/img/gestio.png"));
+
                     Stage currentStage = (Stage)loginId.getScene().getWindow();
 
                     mainStage.setTitle("Gestio Eneam");

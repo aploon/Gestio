@@ -31,7 +31,7 @@ public class App extends Application {
             root = FXMLLoader.load(getClass().getResource("fxml/LoginScene.fxml"));
             Scene scene = new Scene(root);
 
-            primaryStage.getIcons().add(new Image("gestio.png"));
+            primaryStage.getIcons().add(new Image("/assets/img/gestio.png"));
 
             primaryStage.setTitle("Connexion à Gestio Eneam");
             primaryStage.setScene(scene);
