@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="AproposSceneId" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="523.0" prefWidth="765.0" style="-fx-background-color: #ffffff;" visible="false" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AproposSceneController">
+   <children>
+      <BorderPane layoutX="147.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="345.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <center>
+            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="403.0" prefWidth="504.0" style="-fx-background-color: #ebebeb;" BorderPane.alignment="CENTER">
+               <children>
+                  <Text layoutX="35.0" layoutY="108.0" strokeType="OUTSIDE" strokeWidth="0.0" text="&quot;Gestio&quot; est Une plate-forme de gestion de données servant à recueillir et à gérer les données des étudiant d'une université suivant le système LMD. Elle permet aux écoles d'identifier des segments d'audiences, et peut être utilisée pour cibler des utilisateurs spécifiques et des contextes de gestion en ligne par exemple." wrappingWidth="433.13671875">
+                     <font>
+                        <Font size="23.0" />
+                     </font>
+                  </Text>
+               </children>
+            </AnchorPane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

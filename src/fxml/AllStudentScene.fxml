@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="AllStudentSceneId" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="535.0" prefWidth="804.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AllStudentSceneController">
+   <children>
+      <TableView fx:id="tableId" layoutX="47.0" layoutY="40.0" prefHeight="311.0" prefWidth="611.0" stylesheets="@../assets/css/btnstyle.css" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="75.0">
+        <columns>
+          <TableColumn fx:id="matriculeId" maxWidth="500.0" minWidth="100.0" prefWidth="50.0" text="Matricules" />
+          <TableColumn fx:id="nomId" maxWidth="500.0" minWidth="100.0" prefWidth="50.0" text="Nom" />
+            <TableColumn fx:id="prenomId" maxWidth="500.0" minWidth="100.0" prefWidth="50.0" text="Prénom" />
+            <TableColumn fx:id="telephoneId" maxWidth="500.0" minWidth="100.0" prefWidth="50.0" text="Téléphone" />
+            <TableColumn fx:id="sexeId" maxWidth="500.0" minWidth="100.0" prefWidth="50.0" text="Sexe" />
+            <TableColumn fx:id="dateNaissId" maxWidth="500.0" minWidth="100.0" prefWidth="50.0" text="Naissance" />
+            <TableColumn fx:id="actionId" maxWidth="500.0" minWidth="100.0" prefWidth="50.0" text="Action" />
+        </columns>
+      </TableView>
+      <Button fx:id="freshId" layoutX="50.0" layoutY="18.0" mnemonicParsing="false" onAction="#freshBtnClicked" prefHeight="25.0" prefWidth="135.0" style="-fx-background-color: #48a5e4;" text="Rafraîchir" textFill="WHITE" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="20.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

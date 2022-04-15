@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="EvaluateStudentSceneId" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="950.0" style="-fx-background-color: #ffffff;" visible="false" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.EvaluateStudentSceneController">
+   <children>
+      <BorderPane prefHeight="537.0" prefWidth="797.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0">
+         <center>
+            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="522.0" prefWidth="911.0" style="-fx-background-color: #ebebeb;" BorderPane.alignment="CENTER">
+               <children>
+                  <Label layoutX="25.0" layoutY="237.0" prefHeight="31.0" prefWidth="175.0" text="Session" AnchorPane.leftAnchor="25.0">
+                     <font>
+                        <Font name="Berlin Sans FB" size="16.0" />
+                     </font>
+                  </Label>
+                  <ChoiceBox fx:id="sessionId" layoutX="25.0" layoutY="273.0" prefHeight="35.0" prefWidth="250.0" style="-fx-font-size: 14;" AnchorPane.leftAnchor="25.0" />
+                  <TableView fx:id="tableId" layoutX="322.0" layoutY="63.0" prefHeight="436.0" prefWidth="584.0" stylesheets="@../assets/css/btnstyle.css" AnchorPane.rightAnchor="15.0">
+                     <columns>
+                        <TableColumn fx:id="matriculeId" minWidth="50.0" prefWidth="105.0" text="Matricule" />
+                        <TableColumn fx:id="nomId" minWidth="100.0" prefWidth="150.0" text="Nom" />
+                        <TableColumn fx:id="prenomId" minWidth="100.0" prefWidth="150.0" text="Prénom" />
+                        <TableColumn fx:id="noteId" minWidth="50.0" prefWidth="98.0" text="Note" />
+                        <TableColumn fx:id="actionId" minWidth="50.0" prefWidth="100.0" text="Actions" />
+                     </columns>
+                  </TableView>
+                  <Label layoutX="25.0" layoutY="141.0" prefHeight="31.0" prefWidth="123.0" text="Filière" AnchorPane.leftAnchor="25.0">
+                     <font>
+                        <Font name="Berlin Sans FB" size="16.0" />
+                     </font>
+                  </Label>
+                  <ChoiceBox fx:id="filiereId" layoutX="25.0" layoutY="177.0" prefHeight="35.0" prefWidth="250.0" style="-fx-font-size: 14;" AnchorPane.leftAnchor="25.0" />
+                  <Label layoutX="25.0" layoutY="43.0" prefHeight="31.0" prefWidth="166.0" text="Unité d'enseignement" AnchorPane.leftAnchor="25.0">
+                     <font>
+                        <Font name="Berlin Sans FB" size="16.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="ueId" layoutX="25.0" layoutY="82.0" prefHeight="35.0" prefWidth="250.0" promptText="Unité d'enseignement" style="-fx-font-size: 14;" AnchorPane.leftAnchor="25.0" />
+                  <Label layoutX="25.0" layoutY="336.0" prefHeight="31.0" prefWidth="175.0" text="Année académique" AnchorPane.leftAnchor="25.0">
+                     <font>
+                        <Font name="Berlin Sans FB" size="16.0" />
+                     </font>
+                  </Label>
+                  <ChoiceBox fx:id="anneeId" layoutX="25.0" layoutY="372.0" prefHeight="35.0" prefWidth="250.0" style="-fx-font-size: 14;" AnchorPane.leftAnchor="25.0" />
+                  <Label layoutX="25.0" layoutY="430.0" prefHeight="31.0" prefWidth="175.0" text="Semestre" AnchorPane.leftAnchor="25.0">
+                     <font>
+                        <Font name="Berlin Sans FB" size="16.0" />
+                     </font>
+                  </Label>
+                  <ChoiceBox fx:id="semestreId" layoutX="25.0" layoutY="466.0" prefHeight="35.0" prefWidth="250.0" style="-fx-font-size: 14;" AnchorPane.leftAnchor="25.0" />
+               </children>
+            </AnchorPane>
+         </center>
+      </BorderPane>
+      <Button fx:id="freshId" layoutX="712.0" layoutY="52.0" mnemonicParsing="false" onAction="#refreshBtnClicked" prefHeight="25.0" prefWidth="135.0" style="-fx-background-color: #48a5e4;" text="Rafraîchir" textFill="WHITE" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="20.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
