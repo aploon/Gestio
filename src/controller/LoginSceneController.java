@@ -17,6 +17,8 @@ import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.control.Alert.AlertType;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyEvent;
 import javafx.stage.Stage;
 
 public class LoginSceneController implements Initializable{
@@ -30,9 +32,27 @@ public class LoginSceneController implements Initializable{
     @FXML
     private Button loginBtnId;
 
+    @Override
+    public void initialize(URL arg0, ResourceBundle arg1) {
+        
+        loginBtnId.setStyle("-fx-cursor: hand;");
+        
+    }
+
     @FXML
     void OnLoginClicked(ActionEvent event) {
+        checkAuthentification();
+    }
 
+    @FXML
+    void loginKeyPressed(KeyEvent event) {
+        if (event.getCode() == KeyCode.ENTER) {
+
+            checkAuthentification();
+        }
+    }
+
+    void checkAuthentification(){
         Connection db = Dbase.connect();
         PreparedStatement statement;
         ResultSet result;
@@ -93,13 +113,5 @@ public class LoginSceneController implements Initializable{
                 alert.showAndWait();
 
         }
-
-    }
-
-    @Override
-    public void initialize(URL arg0, ResourceBundle arg1) {
-        
-        loginBtnId.setStyle("-fx-cursor: hand;");
-        
     }
 }
