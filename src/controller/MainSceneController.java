@@ -60,6 +60,11 @@ public class MainSceneController implements Initializable {
 
     @Override
     public void initialize(URL arg0, ResourceBundle arg1) {
+        addStudentId.setStyle("-fx-cursor: hand;");
+        allStudentId.setStyle("-fx-cursor: hand;");
+        aproposId.setStyle("-fx-cursor: hand;");
+        evaluateStudentId.setStyle("-fx-cursor: hand;");
+        ueStudentId.setStyle("-fx-cursor: hand;");
 
         facebookId.setStyle("-fx-cursor: hand;");
         linkedinId.setStyle("-fx-cursor: hand;");
