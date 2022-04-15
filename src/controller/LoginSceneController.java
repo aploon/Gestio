@@ -1,27 +1,34 @@
 package controller;
 
 import java.io.IOException;
+import java.net.URL;
 import java.sql.*;
+import java.util.ResourceBundle;
 
 import dbconnecte.Dbase;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
+import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.control.Alert.AlertType;
 import javafx.stage.Stage;
 
-public class LoginSceneController {
+public class LoginSceneController implements Initializable{
 
     @FXML
     private TextField loginId;
 
     @FXML
     private PasswordField passwordId;
+
+    @FXML
+    private Button loginBtnId;
 
     @FXML
     void OnLoginClicked(ActionEvent event) {
@@ -89,4 +96,10 @@ public class LoginSceneController {
 
     }
 
+    @Override
+    public void initialize(URL arg0, ResourceBundle arg1) {
+        
+        loginBtnId.setStyle("-fx-cursor: hand;");
+        
+    }
 }

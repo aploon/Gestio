@@ -80,7 +80,7 @@
             </AnchorPane>
          </center>
          <bottom>
-            <Button fx:id="addId" alignment="CENTER" mnemonicParsing="false" onAction="#AddBtnClicked" prefHeight="36.0" prefWidth="180.0" style="-fx-background-color: #48a5e4;" text="Ajouter" textFill="WHITE" BorderPane.alignment="CENTER_RIGHT">
+            <Button fx:id="addId" alignment="CENTER" mnemonicParsing="false" onAction="#AddBtnClicked" prefHeight="36.0" prefWidth="180.0" text="Ajouter" textFill="WHITE" BorderPane.alignment="CENTER_RIGHT">
                <font>
                   <Font size="16.0" />
                </font>

@@ -89,6 +89,10 @@ public class UpdateStudentModalSceneController implements Initializable {
     @Override
     public void initialize(URL arg0, ResourceBundle arg1) {
 
+        femininId.setStyle("-fx-cursor: hand;");
+        masculinId.setStyle("-fx-cursor: hand;");
+        updateId.setStyle("-fx-background-color:  #48a5e4; -fx-cursor: hand;");
+
         final ToggleGroup sexeGroup = new ToggleGroup();
         masculinId.setToggleGroup(sexeGroup);
         femininId.setToggleGroup(sexeGroup);

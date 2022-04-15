@@ -41,8 +41,8 @@ public class Ue {
 
         Button update = new Button("Modifier");
         Button delete = new Button("Supprimer");
-        update.setStyle("-fx-background-color: #48a5e4; -fx-text-fill: white;");
-        delete.setStyle("-fx-background-color: #d608089d; -fx-text-fill: white;");
+        update.setStyle("-fx-background-color: #48a5e4; -fx-text-fill: white; -fx-cursor: hand;");
+        delete.setStyle("-fx-background-color: #d608089d; -fx-text-fill: white; -fx-cursor: hand;");
 
         actions.add(update, 0, 0);
         actions.add(delete, 1, 0);

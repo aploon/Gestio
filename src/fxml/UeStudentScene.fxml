@@ -31,7 +31,7 @@
                         <Font name="Berlin Sans FB" size="16.0" />
                      </font>
                   </Label>
-                  <Button fx:id="addId" alignment="CENTER" layoutX="25.0" layoutY="455.0" mnemonicParsing="false" onAction="#AddBtnClicked" prefHeight="35.0" prefWidth="250.0" style="-fx-background-color: #48a5e4;" text="Ajouter" textFill="WHITE" AnchorPane.leftAnchor="25.0">
+                  <Button fx:id="addId" alignment="CENTER" layoutX="25.0" layoutY="455.0" mnemonicParsing="false" onAction="#AddBtnClicked" prefHeight="35.0" prefWidth="250.0" text="Ajouter" textFill="WHITE" AnchorPane.leftAnchor="25.0">
                      <font>
                         <Font size="16.0" />
                      </font>

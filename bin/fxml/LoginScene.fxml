@@ -46,7 +46,7 @@
             <Font size="14.0" />
          </font>
       </PasswordField>
-      <Button layoutX="328.0" layoutY="360.0" mnemonicParsing="false" onAction="#OnLoginClicked" prefHeight="31.0" prefWidth="308.0" styleClass="loginBtn" stylesheets="@../assets/css/btnstyle.css" text="Se connecter" textFill="WHITE">
+      <Button fx:id="loginBtnId" layoutX="328.0" layoutY="360.0" mnemonicParsing="false" onAction="#OnLoginClicked" prefHeight="31.0" prefWidth="308.0" styleClass="loginBtn" stylesheets="@../assets/css/btnstyle.css" text="Se connecter" textFill="WHITE">
          <font>
             <Font name="System Bold" size="16.0" />
          </font>

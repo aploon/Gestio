@@ -81,8 +81,8 @@ public class Student {
 
         Button update = new Button("Modifier");
         Button delete = new Button("Supprimer");
-        update.setStyle("-fx-background-color: #48a5e4; -fx-text-fill: white;");
-        delete.setStyle("-fx-background-color: #d608089d; -fx-text-fill: white;");
+        update.setStyle("-fx-background-color: #48a5e4; -fx-text-fill: white; -fx-cursor: hand;");
+        delete.setStyle("-fx-background-color: #d608089d; -fx-text-fill: white; -fx-cursor: hand;");
 
         actions.add(update, 0, 0);
         actions.add(delete, 1, 0);
@@ -147,7 +147,7 @@ public class Student {
         actionsNote.setPadding(new Insets(3, 3, 3, 3));
 
         Button addNote = new Button("Noter");
-        addNote.setStyle("-fx-background-color: #48a5e4; -fx-text-fill: white;");
+        addNote.setStyle("-fx-background-color: #48a5e4; -fx-text-fill: white; -fx-cursor: hand;");
         addNote.setPadding(new Insets(5, 15, 5, 15));
         actionsNote.add(addNote, 1, 1);
 

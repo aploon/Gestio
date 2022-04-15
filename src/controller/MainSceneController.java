@@ -1,13 +1,17 @@
 package controller;
 
+import java.net.URL;
+import java.util.ResourceBundle;
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 
-public class MainSceneController {
+public class MainSceneController implements Initializable {
 
     @FXML
     private Label headerLabelId;
@@ -54,6 +58,15 @@ public class MainSceneController {
     @FXML
     protected AnchorPane AproposSceneId;
 
+    @Override
+    public void initialize(URL arg0, ResourceBundle arg1) {
+
+        facebookId.setStyle("-fx-cursor: hand;");
+        linkedinId.setStyle("-fx-cursor: hand;");
+        twiterId.setStyle("-fx-cursor: hand;");
+        
+    }
+
     @FXML
     void AddStudentClicked(ActionEvent event) {
 
@@ -69,12 +82,12 @@ public class MainSceneController {
 
             AddStudentSceneId.setVisible(true);
 
-            allStudentId.setStyle("-fx-background-color: #434345; -fx-background-radius: 30 0 0 30;");
-            aproposId.setStyle("-fx-background-color: #434345; -fx-background-radius: 30 0 0 30;");
-            evaluateStudentId.setStyle("-fx-background-color: #434345; -fx-background-radius: 30 0 0 30;");
-            ueStudentId.setStyle("-fx-background-color: #434345; -fx-background-radius: 30 0 0 30;");
+            allStudentId.setStyle("-fx-background-color: #434345; -fx-background-radius: 30 0 0 30; -fx-cursor: hand;");
+            aproposId.setStyle("-fx-background-color: #434345; -fx-background-radius: 30 0 0 30; -fx-cursor: hand;");
+            evaluateStudentId.setStyle("-fx-background-color: #434345; -fx-background-radius: 30 0 0 30; -fx-cursor: hand;");
+            ueStudentId.setStyle("-fx-background-color: #434345; -fx-background-radius: 30 0 0 30; -fx-cursor: hand;");
 
-            addStudentId.setStyle("-fx-background-color: #323233; -fx-background-radius: 30 0 0 30;");
+            addStudentId.setStyle("-fx-background-color: #323233; -fx-background-radius: 30 0 0 30; -fx-cursor: hand;");
         }
 
     }
@@ -94,12 +107,12 @@ public class MainSceneController {
 
             AllStudentSceneId.setVisible(true);
 
-            aproposId.setStyle("-fx-background-color: #434345; -fx-background-radius: 30 0 0 30;");
-            evaluateStudentId.setStyle("-fx-background-color: #434345; -fx-background-radius: 30 0 0 30;");
-            ueStudentId.setStyle("-fx-background-color: #434345; -fx-background-radius: 30 0 0 30;");
-            addStudentId.setStyle("-fx-background-color: #434345; -fx-background-radius: 30 0 0 30;");
+            aproposId.setStyle("-fx-background-color: #434345; -fx-background-radius: 30 0 0 30; -fx-cursor: hand;");
+            evaluateStudentId.setStyle("-fx-background-color: #434345; -fx-background-radius: 30 0 0 30; -fx-cursor: hand;");
+            ueStudentId.setStyle("-fx-background-color: #434345; -fx-background-radius: 30 0 0 30; -fx-cursor: hand;");
+            addStudentId.setStyle("-fx-background-color: #434345; -fx-background-radius: 30 0 0 30; -fx-cursor: hand;");
 
-            allStudentId.setStyle("-fx-background-color: #323233; -fx-background-radius: 30 0 0 30;");
+            allStudentId.setStyle("-fx-background-color: #323233; -fx-background-radius: 30 0 0 30; -fx-cursor: hand;");
 
         }
     }
@@ -119,12 +132,12 @@ public class MainSceneController {
 
             AproposSceneId.setVisible(true);
 
-            allStudentId.setStyle("-fx-background-color: #434345; -fx-background-radius: 30 0 0 30;");
-            evaluateStudentId.setStyle("-fx-background-color: #434345; -fx-background-radius: 30 0 0 30;");
-            ueStudentId.setStyle("-fx-background-color: #434345; -fx-background-radius: 30 0 0 30;");
-            addStudentId.setStyle("-fx-background-color: #434345; -fx-background-radius: 30 0 0 30;");
+            allStudentId.setStyle("-fx-background-color: #434345; -fx-background-radius: 30 0 0 30; -fx-cursor: hand;");
+            evaluateStudentId.setStyle("-fx-background-color: #434345; -fx-background-radius: 30 0 0 30; -fx-cursor: hand;");
+            ueStudentId.setStyle("-fx-background-color: #434345; -fx-background-radius: 30 0 0 30; -fx-cursor: hand;");
+            addStudentId.setStyle("-fx-background-color: #434345; -fx-background-radius: 30 0 0 30; -fx-cursor: hand;");
 
-            aproposId.setStyle("-fx-background-color: #323233; -fx-background-radius: 30 0 0 30;");
+            aproposId.setStyle("-fx-background-color: #323233; -fx-background-radius: 30 0 0 30; -fx-cursor: hand;");
         }
     }
 
@@ -143,12 +156,12 @@ public class MainSceneController {
 
             EvaluateStudentSceneId.setVisible(true);
 
-            allStudentId.setStyle("-fx-background-color: #434345; -fx-background-radius: 30 0 0 30;");
-            ueStudentId.setStyle("-fx-background-color: #434345; -fx-background-radius: 30 0 0 30;");
-            addStudentId.setStyle("-fx-background-color: #434345; -fx-background-radius: 30 0 0 30;");           
-            aproposId.setStyle("-fx-background-color: #434345; -fx-background-radius: 30 0 0 30;");
+            allStudentId.setStyle("-fx-background-color: #434345; -fx-background-radius: 30 0 0 30; -fx-cursor: hand;");
+            ueStudentId.setStyle("-fx-background-color: #434345; -fx-background-radius: 30 0 0 30; -fx-cursor: hand;");
+            addStudentId.setStyle("-fx-background-color: #434345; -fx-background-radius: 30 0 0 30; -fx-cursor: hand;");           
+            aproposId.setStyle("-fx-background-color: #434345; -fx-background-radius: 30 0 0 30; -fx-cursor: hand;");
 
-            evaluateStudentId.setStyle("-fx-background-color: #323233; -fx-background-radius: 30 0 0 30;");
+            evaluateStudentId.setStyle("-fx-background-color: #323233; -fx-background-radius: 30 0 0 30; -fx-cursor: hand;");
         }
     }
 
@@ -167,12 +180,12 @@ public class MainSceneController {
 
             UeStudentSceneId.setVisible(true);
 
-            allStudentId.setStyle("-fx-background-color: #434345; -fx-background-radius: 30 0 0 30;");
-            addStudentId.setStyle("-fx-background-color: #434345; -fx-background-radius: 30 0 0 30;");           
-            aproposId.setStyle("-fx-background-color: #434345; -fx-background-radius: 30 0 0 30;");
-            evaluateStudentId.setStyle("-fx-background-color: #434345; -fx-background-radius: 30 0 0 30;");
+            allStudentId.setStyle("-fx-background-color: #434345; -fx-background-radius: 30 0 0 30; -fx-cursor: hand;");
+            addStudentId.setStyle("-fx-background-color: #434345; -fx-background-radius: 30 0 0 30; -fx-cursor: hand;");           
+            aproposId.setStyle("-fx-background-color: #434345; -fx-background-radius: 30 0 0 30; -fx-cursor: hand;");
+            evaluateStudentId.setStyle("-fx-background-color: #434345; -fx-background-radius: 30 0 0 30; -fx-cursor: hand;");
 
-            ueStudentId.setStyle("-fx-background-color: #323233; -fx-background-radius: 30 0 0 30;");
+            ueStudentId.setStyle("-fx-background-color: #323233; -fx-background-radius: 30 0 0 30; -fx-cursor: hand;");
         }
         
     }

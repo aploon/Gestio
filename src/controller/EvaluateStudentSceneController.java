@@ -73,6 +73,8 @@ public class EvaluateStudentSceneController implements Initializable {
     @Override
     public void initialize(URL arg0, ResourceBundle arg1) {
 
+        freshId.setStyle("-fx-background-color:  #48a5e4; -fx-cursor: hand;");
+
         ObservableList<Student> data = FXCollections.observableArrayList();
 
         Connection db = Dbase.connect();
