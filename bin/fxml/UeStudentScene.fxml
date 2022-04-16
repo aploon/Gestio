@@ -65,7 +65,7 @@
             </AnchorPane>
          </center>
       </BorderPane>
-      <Button fx:id="freshId" layoutX="702.0" layoutY="42.0" mnemonicParsing="false" onAction="#refreshBtnClicked" prefHeight="25.0" prefWidth="135.0" style="-fx-background-color: #48a5e4;" text="Rafraîchir" textFill="WHITE" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="20.0">
+      <Button fx:id="freshId" layoutX="702.0" layoutY="42.0" mnemonicParsing="false" onAction="#refreshBtnClicked" prefHeight="25.0" prefWidth="135.0" text="Rafraîchir" textFill="WHITE" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="20.0">
          <font>
             <Font size="14.0" />
          </font>

@@ -31,6 +31,9 @@ public class UeStudentSceneController implements Initializable {
     private Button addId;
 
     @FXML
+    private Button freshId;
+
+    @FXML
     private TableColumn<Ue, GridPane> actionsId;
 
     @FXML
@@ -64,6 +67,7 @@ public class UeStudentSceneController implements Initializable {
     public void initialize(URL arg0, ResourceBundle arg1) {
 
         addId.setStyle("-fx-background-color:  #48a5e4; -fx-cursor: hand;");
+        freshId.setStyle("-fx-background-color:  #48a5e4; -fx-cursor: hand;");
 
         ObservableList<Ue> data = FXCollections.observableArrayList();
 
