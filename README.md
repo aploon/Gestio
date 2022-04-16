@@ -24,7 +24,7 @@ The `JAVA PROJECTS` view allows you to manage your dependencies. More details ca
 - Hover css of menu button don't match correctly
 - Icon into alert frame don't work
 
-#Features that i want to add
+## Features that i want to add
 
 - Title when i move cursor in front of link like Facebook...
 - Add GIF image into login button when it will be clicked
