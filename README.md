@@ -20,7 +20,7 @@ The `JAVA PROJECTS` view allows you to manage your dependencies. More details ca
 ## Error
 
 - In add student area, alert error don't work
-- Need to refresh platforme before actualise the data
+- Need to refresh platforme before actualise the data `corrected`
 - Hover css of menu button don't match correctly
 - Icon into alert frame don't work
 
