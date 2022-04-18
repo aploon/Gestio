@@ -116,12 +116,23 @@ public class AddNoteModalSceneController implements Initializable{
             id_semestre,
             id_session,
             id_annee_academique,
-            id_ue
+            id_ue,
+            null,
+            null
         );
 
         if(student.getNote().equals("-")){
             if(studentNote.insertNoteToDatabase()){
                 System.out.println("Note attribué !");
+
+                try {
+
+                    student.getEvaluateStudentSceneController().refreshBtnClicked(event);
+        
+                } catch (Exception e) {
+                    System.out.println("Erreur : " + e);
+                }
+
                 stage.close();
             }else{
                 System.out.println("Erreur de modification !");
@@ -129,6 +140,15 @@ public class AddNoteModalSceneController implements Initializable{
         }else{
             if(studentNote.updateNoteToDatabase(student.getId(), Integer.parseInt(noteId.getText()))){
                 System.out.println("Note modifier !");
+
+                try {
+
+                    student.getEvaluateStudentSceneController().refreshBtnClicked(event);
+        
+                } catch (Exception e) {
+                    System.out.println("Erreur : " + e);
+                }
+
                 stage.close();
             }else{
                 System.out.println("Erreur de modification !");

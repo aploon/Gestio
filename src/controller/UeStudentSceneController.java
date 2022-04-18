@@ -121,7 +121,8 @@ public class UeStudentSceneController implements Initializable {
                         result.getString(2),
                         result.getInt(3),
                         result.getInt(4),
-                        result.getInt(5));
+                        result.getInt(5),
+                        this);
                 data.add(ue);
             }
             db.close();
@@ -149,7 +150,9 @@ public class UeStudentSceneController implements Initializable {
             ueId.getText(),
             Integer.parseInt(creditId.getText()),
             idFiliere,
-            idSemestre);
+            idSemestre,
+            this
+            );
 
         if (ue.insertToDataBase()) {
             System.out.println("Donnée insérer !");
@@ -189,7 +192,9 @@ public class UeStudentSceneController implements Initializable {
                         result.getString(2),
                         result.getInt(3),
                         result.getInt(4),
-                        result.getInt(5));
+                        result.getInt(5),
+                        this
+                        );
                 data.add(ue);
             }
             db.close();

@@ -18,6 +18,7 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.stage.Stage;
@@ -32,6 +33,9 @@ public class LoginSceneController implements Initializable{
 
     @FXML
     private Button loginBtnId;
+
+    @FXML
+    private ImageView loginLoaderId;
 
     @Override
     public void initialize(URL arg0, ResourceBundle arg1) {

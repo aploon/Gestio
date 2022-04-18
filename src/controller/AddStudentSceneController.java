@@ -95,7 +95,7 @@ public class AddStudentSceneController implements Initializable {
             sexeId,
             dateNaiss,"-",
             idFiliere,
-            0,0,0,0
+            0,0,0,0, null, null
         );
 
         if(student.insertToDataBase()){

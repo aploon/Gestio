@@ -28,4 +28,7 @@ The `JAVA PROJECTS` view allows you to manage your dependencies. More details ca
 
 - Title when i move cursor in front of link like Facebook...
 - Add GIF image into login button when it will be clicked
-- Changement du titre du mainScene lorsqu'on change d'area
+- Update the title of the main window when area change
+- Controls all input from users
+- Permission to enter a decimal number
+- Splash screen

@@ -150,7 +150,9 @@ public class EvaluateStudentSceneController implements Initializable {
                     idSemestre,
                     idSession,
                     idAnnee,
-                    idUe
+                    idUe,
+                    null,
+                    this
                 );
                 data.add(student);
             }
@@ -216,7 +218,9 @@ public class EvaluateStudentSceneController implements Initializable {
                     idSemestre,
                     idSession,
                     idAnnee,
-                    idUe
+                    idUe,
+                    null,
+                    this
                 );
                 data.add(student);
             }

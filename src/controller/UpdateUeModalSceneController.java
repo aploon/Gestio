@@ -27,34 +27,6 @@ public class UpdateUeModalSceneController implements Initializable {
     @FXML
     private Button updateId;
 
-    @FXML
-    void UpdateBtnClicked(ActionEvent event) {
-
-        Stage stage = (Stage) updateId.getScene().getWindow();
-        Ue ue = (Ue) stage.getUserData();
-        
-        int id = ue.getId();
-        int idFiliere = ue.getIdFiliere();
-        int idSemestre = ue.getIdSemestre();
-
-
-        Ue ueUpdate = new Ue(
-            id,
-            intituleId.getText(),
-            Integer.parseInt(creditId.getText()),
-            idFiliere,
-            idSemestre
-        );
-
-        if(ueUpdate.updateDataBase(id)){
-            System.out.println("Modification faite !");
-            stage.close();
-        }else{
-            System.out.println("Erreur de modification !");
-        }
-
-    }
-
     @Override
     public void initialize(URL arg0, ResourceBundle arg1) {
 
@@ -79,6 +51,45 @@ public class UpdateUeModalSceneController implements Initializable {
             e.printStackTrace();
         }
         
+    }
+
+
+    @FXML
+    void UpdateBtnClicked(ActionEvent event) {
+
+        Stage stage = (Stage) updateId.getScene().getWindow();
+        Ue ue = (Ue) stage.getUserData();
+        
+        int id = ue.getId();
+        int idFiliere = ue.getIdFiliere();
+        int idSemestre = ue.getIdSemestre();
+
+
+        Ue ueUpdate = new Ue(
+            id,
+            intituleId.getText(),
+            Integer.parseInt(creditId.getText()),
+            idFiliere,
+            idSemestre,
+            null
+        );
+
+        if(ueUpdate.updateDataBase(id)){
+            System.out.println("Modification faite !");
+
+            try {
+
+                ue.getUeStudentSceneController().refreshBtnClicked(event);
+    
+            } catch (Exception e) {
+                System.out.println("Erreur : " + e);
+            }
+
+            stage.close();
+        }else{
+            System.out.println("Erreur de modification !");
+        }
+
     }
 
 }

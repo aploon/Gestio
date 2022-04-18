@@ -5,6 +5,7 @@ import java.sql.*;
 import java.util.ResourceBundle;
 
 import dbconnecte.Dbase;
+import javafx.application.Platform;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -16,6 +17,7 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
+import javafx.stage.Stage;
 import model.Student;
 
 public class AllStudentSceneController implements Initializable{
@@ -82,7 +84,7 @@ public class AllStudentSceneController implements Initializable{
                     result.getString(4),
                     result.getString(5),
                     result.getString(6),
-                    result.getString(7),"-",0,0,0,0,0
+                    result.getString(7),"-",0,0,0,0,0, this, null
                 );
                 data.add(stud);
             }
@@ -102,6 +104,23 @@ public class AllStudentSceneController implements Initializable{
         tableId.setItems(data);
 
         tableId.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY);
+
+
+        try {                    
+
+            Platform.runLater(new Runnable() {
+
+                @Override
+                public void run() {
+                    Stage currentStage = (Stage) freshId.getScene().getWindow();
+                    currentStage.setUserData(this);
+                }
+                
+            });
+        } catch (Exception e) {
+
+            e.printStackTrace();
+        }
         
     }
 
@@ -130,7 +149,7 @@ public class AllStudentSceneController implements Initializable{
                     result.getString(4),
                     result.getString(5),
                     result.getString(6),
-                    result.getString(7),"-",0,0,0,0,0
+                    result.getString(7),"-",0,0,0,0,0, this, null
                 );
                 data.add(stud);
             }

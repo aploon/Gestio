@@ -5,6 +5,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.util.Optional;
 
+import controller.UeStudentSceneController;
 import dbconnecte.Dbase;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
@@ -29,12 +30,19 @@ public class Ue {
     private int idSemestre;
     private GridPane actions;
 
-    public Ue(int id, String intitule, int credit, int idFiliere, int idSemestre) {
+    private UeStudentSceneController UeStudentSceneController;
+
+
+    public Ue(int id, String intitule, int credit, int idFiliere, int idSemestre,
+            UeStudentSceneController ueStudentSceneController) {
+
         this.id = id;
         this.intitule = intitule;
         this.credit = credit;
         this.idFiliere = idFiliere;
         this.idSemestre = idSemestre;
+
+        this.UeStudentSceneController = ueStudentSceneController;
 
         this.actions = new GridPane();
         actions.setVgap(1);
@@ -152,6 +160,14 @@ public class Ue {
 
     public void setActions(GridPane actions) {
         this.actions = actions;
+    }
+
+    public UeStudentSceneController getUeStudentSceneController() {
+        return UeStudentSceneController;
+    }
+
+    public void setUeStudentSceneController(UeStudentSceneController ueStudentSceneController) {
+        UeStudentSceneController = ueStudentSceneController;
     }
 
     public boolean insertToDataBase() {

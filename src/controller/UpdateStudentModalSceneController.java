@@ -74,11 +74,25 @@ public class UpdateStudentModalSceneController implements Initializable {
             prenomId.getText(),
             telephoneId.getText(),
             sexe,
-            dateNaiss,"-",0,0,0,0,0
+            dateNaiss,"-",0,0,0,0,0, null, null
         );
 
         if(studentUpdate.updateDataBase(id)){
             System.out.println("Modification faite !");
+
+            try {
+
+                // FXMLLoader loader = new FXMLLoader(getClass().getResource("../fxml/MainScene.fxml"));
+                // Parent root = loader.load();
+    
+                // MainSceneController MainSceneController = loader.getController();
+
+                student.getAllStudentSceneController().freshBtnClicked(event);
+    
+            } catch (Exception e) {
+                System.out.println("Erreur : " + e);
+            }
+
             stage.close();
         }else{
             System.out.println("Erreur de modification !");
