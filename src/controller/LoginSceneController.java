@@ -6,7 +6,6 @@ import java.sql.*;
 import java.util.ResourceBundle;
 
 import dbconnecte.Dbase;
-import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
