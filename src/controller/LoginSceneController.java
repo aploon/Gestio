@@ -6,6 +6,7 @@ import java.sql.*;
 import java.util.ResourceBundle;
 
 import dbconnecte.Dbase;
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -51,6 +52,7 @@ public class LoginSceneController implements Initializable{
 
     @FXML
     void loginKeyPressed(KeyEvent event) {
+
         if (event.getCode() == KeyCode.ENTER) {
 
             checkAuthentification();
@@ -58,12 +60,16 @@ public class LoginSceneController implements Initializable{
     }
 
     void checkAuthentification(){
+       
         Connection db = Dbase.connect();
         PreparedStatement statement;
         ResultSet result;
         String query;
 
         try {
+            loginBtnId.setText("");
+            loginLoaderId.setVisible(true);
+
             query = "SELECT * FROM COMPTE WHERE TYPE = 'Admin' AND (PSEUDO = ? OR EMAIL = ?) AND PASSWORD = ?";
             statement = db.prepareStatement(query);
 
@@ -82,7 +88,7 @@ public class LoginSceneController implements Initializable{
                     Scene scene = new Scene(root);
 
                     Stage mainStage = new Stage();
-                    mainStage.getIcons().add(new Image("/assets/img/gestio.png"));
+                    mainStage.getIcons().add(new Image("/assets/img/gestio_ai.png"));
 
                     Stage currentStage = (Stage)loginId.getScene().getWindow();
 
@@ -107,6 +113,9 @@ public class LoginSceneController implements Initializable{
                 alert.setContentText("Une erreur s'est produite lors de la connexion à Gestio ! \n" 
                 + "Veuillez vérifier vos identifiants de connexion et réessayer");
                 alert.showAndWait();
+
+                loginBtnId.setText("Se connecter");
+                loginLoaderId.setVisible(false);
             }
 
         } catch (Exception e) {

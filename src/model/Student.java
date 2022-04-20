@@ -118,7 +118,7 @@ public class Student {
                         Stage currentStage = (Stage) update.getScene().getWindow();
 
 
-                        mainStage.getIcons().add(new Image("/assets/img/gestio.png"));
+                        mainStage.getIcons().add(new Image("/assets/img/gestio_ai.png"));
 
                         mainStage.setUserData(this);
                         mainStage.initModality(Modality.APPLICATION_MODAL);
@@ -183,7 +183,7 @@ public class Student {
                         Stage mainStage = new Stage();
                         Stage currentStage = (Stage) addNote.getScene().getWindow();
 
-                        mainStage.getIcons().add(new Image("/assets/img/gestio.png"));
+                        mainStage.getIcons().add(new Image("/assets/img/gestio_ai.png"));
 
                         mainStage.setUserData(this);
                         mainStage.initModality(Modality.APPLICATION_MODAL);
