@@ -54,7 +54,7 @@
       <Label layoutX="519.0" layoutY="322.0" prefHeight="17.0" prefWidth="117.0" text="Mot de passe oublié ?" textFill="#006cae" />
       <ImageView fx:id="loginLoaderId" fitHeight="35.0" fitWidth="49.0" layoutX="468.0" layoutY="361.0" pickOnBounds="true" preserveRatio="true" visible="false">
          <image>
-            <Image url="@../assets/img/Spinner.gif" />
+            <Image url="@../assets/img/Spinner_final.gif" />
          </image>
       </ImageView>
    </children>

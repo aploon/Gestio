@@ -6,18 +6,10 @@
     "configurations": [
         {
             "type": "java",
-            "name": "Launch LoginToApp",
-            "request": "launch",
-            "mainClass": "LoginToApp",
-            "projectName": "gestioneneam_3479e96a",
-            "vmArgs": "--module-path \"C:/KitDevelop/javafx/javafx-sdk-17.0.2/lib\" --add-modules javafx.controls,javafx.fxml"
-        },
-        {
-            "type": "java",
             "name": "Launch App",
             "request": "launch",
             "mainClass": "App",
-            "projectName": "gestioneneam_3479e96a",
+            "projectName": "gestioneneam_4a8b84f9",
             "vmArgs": "--module-path \"C:/KitDevelop/javafx/javafx-sdk-17.0.2/lib\" --add-modules javafx.controls,javafx.fxml"
         },
         {
