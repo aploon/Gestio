@@ -6,6 +6,7 @@ import java.sql.*;
 import java.util.ResourceBundle;
 
 import dbconnecte.Dbase;
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -23,7 +24,7 @@ import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.stage.Stage;
 
-public class LoginSceneController implements Initializable{
+public class LoginSceneController implements Initializable {
 
     @FXML
     private TextField loginId;
@@ -39,14 +40,42 @@ public class LoginSceneController implements Initializable{
 
     @Override
     public void initialize(URL arg0, ResourceBundle arg1) {
-        
+
         loginBtnId.setStyle("-fx-cursor: hand;");
-        
+
     }
 
     @FXML
     void OnLoginClicked(ActionEvent event) {
-        checkAuthentification();
+
+        loginBtnId.setText("");
+        loginLoaderId.setVisible(true);
+
+        new Thread(new Runnable() {
+
+            @Override
+            public void run() {
+
+                try {
+
+                    Thread.sleep(2000);
+                    Platform.runLater(new Runnable() {
+
+                        @Override
+                        public void run() {
+
+                            checkAuthentification();
+
+                        }
+
+                    });
+
+                } catch (Exception e) {
+
+                }
+            }
+        }).start();
+
     }
 
     @FXML
@@ -54,20 +83,45 @@ public class LoginSceneController implements Initializable{
 
         if (event.getCode() == KeyCode.ENTER) {
 
-            checkAuthentification();
+            loginBtnId.setText("");
+            loginLoaderId.setVisible(true);
+
+            new Thread(new Runnable() {
+
+                @Override
+                public void run() {
+
+                    try {
+
+                        Thread.sleep(2000);
+                        Platform.runLater(new Runnable() {
+
+                            @Override
+                            public void run() {
+
+                                checkAuthentification();
+
+                            }
+
+                        });
+
+                    } catch (Exception e) {
+
+                    }
+                }
+            }).start();
+
         }
     }
 
-    void checkAuthentification(){
-       
+    void checkAuthentification() {
+
         Connection db = Dbase.connect();
         PreparedStatement statement;
         ResultSet result;
         String query;
 
         try {
-            loginBtnId.setText("");
-            loginLoaderId.setVisible(true);
 
             query = "SELECT * FROM COMPTE WHERE TYPE = 'Admin' AND (PSEUDO = ? OR EMAIL = ?) AND PASSWORD = ?";
             statement = db.prepareStatement(query);
@@ -89,7 +143,7 @@ public class LoginSceneController implements Initializable{
                     Stage mainStage = new Stage();
                     mainStage.getIcons().add(new Image("/assets/img/gestio_ai.png"));
 
-                    Stage currentStage = (Stage)loginId.getScene().getWindow();
+                    Stage currentStage = (Stage) loginId.getScene().getWindow();
 
                     mainStage.setTitle("Gestio Eneam");
                     mainStage.setScene(scene);
@@ -99,7 +153,6 @@ public class LoginSceneController implements Initializable{
                     currentStage.close();
                     mainStage.show();
 
-                    
                 } catch (IOException e) {
 
                     // e.printStackTrace();
@@ -109,8 +162,8 @@ public class LoginSceneController implements Initializable{
 
                 Alert alert = new Alert(AlertType.ERROR);
                 alert.setTitle("Erreur de connexion");
-                alert.setContentText("Une erreur s'est produite lors de la connexion à Gestio ! \n" 
-                + "Veuillez vérifier vos identifiants de connexion et réessayer");
+                alert.setContentText("Une erreur s'est produite lors de la connexion à Gestio ! \n"
+                        + "Veuillez vérifier vos identifiants de connexion et réessayer");
                 alert.showAndWait();
 
                 loginBtnId.setText("Se connecter");
@@ -121,11 +174,11 @@ public class LoginSceneController implements Initializable{
             System.out.println("Erreur lors de la connexion à Gestio : " + e);
 
             Alert alert = new Alert(AlertType.ERROR);
-                alert.setTitle("Erreur de connexion");
-                alert.setContentText("Une erreur s'est produite lors de la connexion à Gestio ! \n" 
-                + "Veuillez vérifier vos identifiants de connexion et réessayer \n"
-                + "Erreur de connexion : " + e);
-                alert.showAndWait();
+            alert.setTitle("Erreur de connexion");
+            alert.setContentText("Une erreur s'est produite lors de la connexion à Gestio ! \n"
+                    + "Veuillez vérifier vos identifiants de connexion et réessayer \n"
+                    + "Erreur de connexion : " + e);
+            alert.showAndWait();
 
         }
     }
