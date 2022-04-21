@@ -150,8 +150,8 @@ public class LoginSceneController implements Initializable {
                     mainStage.setMinWidth(500);
                     mainStage.setMinHeight(500);
 
-                    currentStage.close();
                     mainStage.show();
+                    currentStage.close();
 
                 } catch (IOException e) {
 
