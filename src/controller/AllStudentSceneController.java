@@ -26,6 +26,9 @@ public class AllStudentSceneController implements Initializable{
     private Button freshId;
 
     @FXML
+    private AnchorPane preloadId;
+
+    @FXML
     private AnchorPane AllStudentSceneId;
 
     @FXML
@@ -169,6 +172,10 @@ public class AllStudentSceneController implements Initializable{
         tableId.setItems(data);
 
         tableId.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY);
+    }
+
+    void preload(boolean visible){
+        preloadId.setVisible(visible);
     }
 
 }

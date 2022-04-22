@@ -78,6 +78,9 @@ public class UpdateStudentModalSceneController implements Initializable {
         );
 
         if(studentUpdate.updateDataBase(id)){
+
+            student.getAllStudentSceneController().preload(true);
+
             System.out.println("Modification faite !");
 
             try {
@@ -87,7 +90,32 @@ public class UpdateStudentModalSceneController implements Initializable {
     
                 // MainSceneController MainSceneController = loader.getController();
 
-                student.getAllStudentSceneController().freshBtnClicked(event);
+                new Thread(new Runnable() {
+
+                    @Override
+                    public void run() {
+        
+                        try {
+        
+                            Thread.sleep(2000);
+                            Platform.runLater(new Runnable() {
+        
+                                @Override
+                                public void run() {
+        
+                                    student.getAllStudentSceneController().freshBtnClicked(event);
+                                    student.getAllStudentSceneController().preload(false);
+        
+                                }
+        
+                            });
+        
+                        } catch (Exception e) {
+        
+                        }
+                    }
+                }).start();
+
     
             } catch (Exception e) {
                 System.out.println("Erreur : " + e);
