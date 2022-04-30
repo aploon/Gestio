@@ -19,6 +19,7 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import model.Ue;
 
@@ -26,6 +27,9 @@ public class UeStudentSceneController implements Initializable {
 
     @FXML
     private AnchorPane UeStudentSceneId;
+
+    @FXML
+    private BorderPane preloadId;
 
     @FXML
     private Button addId;
@@ -214,6 +218,9 @@ public class UeStudentSceneController implements Initializable {
 
     }
 
+    void preload(boolean visible){
+        preloadId.setVisible(visible);
+    }
 
     void recupFiliereId(){
 

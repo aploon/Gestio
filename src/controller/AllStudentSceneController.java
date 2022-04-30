@@ -16,6 +16,7 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 import model.Student;
@@ -26,7 +27,7 @@ public class AllStudentSceneController implements Initializable{
     private Button freshId;
 
     @FXML
-    private AnchorPane preloadId;
+    private BorderPane preloadId;
 
     @FXML
     private AnchorPane AllStudentSceneId;

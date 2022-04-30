@@ -32,3 +32,4 @@ The `JAVA PROJECTS` view allows you to manage your dependencies. More details ca
 - Controls all input from users
 - Permission to enter a decimal number
 - Splash screen
+- When click "Enter" -> match

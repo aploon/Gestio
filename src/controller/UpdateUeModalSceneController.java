@@ -75,11 +75,37 @@ public class UpdateUeModalSceneController implements Initializable {
         );
 
         if(ueUpdate.updateDataBase(id)){
+
+            ue.getUeStudentSceneController().preload(true);
             System.out.println("Modification faite !");
 
             try {
 
-                ue.getUeStudentSceneController().refreshBtnClicked(event);
+                new Thread(new Runnable() {
+
+                    @Override
+                    public void run() {
+        
+                        try {
+        
+                            Thread.sleep(2000);
+                            Platform.runLater(new Runnable() {
+        
+                                @Override
+                                public void run() {
+        
+                                    ue.getUeStudentSceneController().refreshBtnClicked(event);
+                                    ue.getUeStudentSceneController().preload(false);
+        
+                                }
+        
+                            });
+        
+                        } catch (Exception e) {
+        
+                        }
+                    }
+                }).start();
     
             } catch (Exception e) {
                 System.out.println("Erreur : " + e);

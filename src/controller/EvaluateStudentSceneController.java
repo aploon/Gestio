@@ -19,6 +19,7 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import model.Student;
 
@@ -27,6 +28,9 @@ public class EvaluateStudentSceneController implements Initializable {
 
     @FXML
     private AnchorPane EvaluateStudentSceneId;
+
+    @FXML
+    private BorderPane preloadId;
 
     @FXML
     private ChoiceBox<String> anneeId;
@@ -240,6 +244,10 @@ public class EvaluateStudentSceneController implements Initializable {
 
         tableId.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY);
 
+    }
+
+    void preload(boolean visible){
+        preloadId.setVisible(visible);
     }
 
     void ueSelected(){

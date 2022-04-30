@@ -27,18 +27,14 @@
             <Font size="14.0" />
          </font>
       </Button>
-      <AnchorPane fx:id="preloadId" opacity="0.5" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #434345;" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-         <children>
-            <BorderPane prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-               <center>
-                  <ImageView fitHeight="100.0" fitWidth="108.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
-                     <image>
-                        <Image url="@../assets/img/Rolling-1s-175px.gif" />
-                     </image>
-                  </ImageView>
-               </center>
-            </BorderPane>
-         </children>
-      </AnchorPane>
+      <BorderPane fx:id="preloadId" opacity="0.5" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #434345;" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <center>
+            <ImageView fitHeight="100.0" fitWidth="108.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+               <image>
+                  <Image url="@../assets/img/Rolling-1s-175px.gif" />
+               </image>
+            </ImageView>
+         </center>
+      </BorderPane>
    </children>
 </AnchorPane>
