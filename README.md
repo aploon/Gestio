@@ -4,7 +4,7 @@
 
 ### A propos de Gestio
 
-"Gestio est une plate-forme de gestion servant à recueillir et à gérer les données des étudiant d'une université suivant le système LMD. Elle permet aux écoles d'identifier des segments d'audiences, et peut être utilisée pour cibler des utilisateurs spécifiques et des contextes de gestion en ligne par exemple."
+> Gestio est une plate-forme de gestion servant à recueillir et à gérer les données des étudiant d'une université suivant le système LMD. Elle permet aux écoles d'identifier des segments d'audiences, et peut être utilisée pour cibler des utilisateurs spécifiques et des contextes de gestion en ligne par exemple.
 
 ## Gestio Pages
 
