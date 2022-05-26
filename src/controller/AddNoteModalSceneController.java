@@ -172,7 +172,32 @@ public class AddNoteModalSceneController implements Initializable{
 
                 try {
 
-                    student.getEvaluateStudentSceneController().refreshBtnClicked(event);
+                    new Thread(new Runnable() {
+
+                        @Override
+                        public void run() {
+            
+                            try {
+            
+                                Thread.sleep(2000);
+                                Platform.runLater(new Runnable() {
+            
+                                    @Override
+                                    public void run() {
+            
+                                        student.getEvaluateStudentSceneController().refreshBtnClicked(event);
+                                        student.getEvaluateStudentSceneController().preload(false);
+            
+                                    }
+            
+                                });
+            
+                            } catch (Exception e) {
+            
+                            }
+                        }
+                    }).start();
+
         
                 } catch (Exception e) {
                     System.out.println("Erreur : " + e);
