@@ -106,11 +106,11 @@ public class AddNoteModalSceneController implements Initializable{
         Student studentNote = new Student(
             id_etudiant,
             123456789,
-            "Arnaud",
-            "Précieux",
-            "68980983",
-            "Masculin",
-            "02/02/2002",
+            "xxx",
+            "xxx",
+            "xxx",
+            "xxx",
+            "xx/xx/xxxx",
             noteId.getText(),
             id_filiere,
             id_semestre,
@@ -162,10 +162,12 @@ public class AddNoteModalSceneController implements Initializable{
 
                 stage.close();
             }else{
-                System.out.println("Erreur de modification !");
+                System.out.println("Erreur lors de l'attribution de la note !");
             }
         }else{
             if(studentNote.updateNoteToDatabase(student.getId(), Integer.parseInt(noteId.getText()))){
+
+                student.getEvaluateStudentSceneController().preload(true);
                 System.out.println("Note modifier !");
 
                 try {
