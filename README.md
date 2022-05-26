@@ -1,3 +1,21 @@
+## Gestio
+
+<p align="center"><a href="https://github.com/ArnaudAploon/Gestio/blob/main/src/assets/readme/img/Gestio%20Eneam%2026_05_2022%2023_51_15.png?raw=true"></a></p>
+
+### A propos de Gestio
+
+"Gestio est une plate-forme de gestion servant à recueillir et à gérer les données des étudiant d'une université suivant le système LMD. Elle permet aux écoles d'identifier des segments d'audiences, et peut être utilisée pour cibler des utilisateurs spécifiques et des contextes de gestion en ligne par exemple."
+
+## Gestio Pages
+
+### Page de connexion
+
+<p align="center"><a href="https://github.com/ArnaudAploon/Gestio/blob/main/src/assets/readme/img/Connexion%20%C3%A0%20Gestio%20Eneam%2027_05_2022%2000_19_42.png?raw=true"></a></p>
+
+### Page des unitées d'enseignements
+
+<p align="center"><a href="https://github.com/ArnaudAploon/Gestio/blob/main/src/assets/readme/img/Gestio%20Eneam%2026_05_2022%2023_51_29.png?raw=true"></a></p>
+
 ## Getting Started
 
 Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
